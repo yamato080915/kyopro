@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block title %}Contests{% endblock %}
+{% block content %}
+<div class="container mt-4">
+	<h2>Upcoming Contests</h2>
+	<table class="table table-bordered table-hover">
+		<thead class="table-light">
+		<tr>
+			<th>Start Time (UTC)</th>
+			<th>Contest Name</th>
+			<th>Duration</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>2025-04-13 12:00</td>
+			<td><a href="/contest/abc351">AtCoder Beginner Contest 351</a></td>
+			<td>100 min</td>
+		</tr>
+		<tr>
+			<td>2025-04-20 12:00</td>
+			<td><a href="/contest/arc161">AtCoder Regular Contest 161</a></td>
+			<td>120 min</td>
+		</tr>
+		</tbody>
+	</table>
+	
+	<h2 class="mt-5">Current Contests</h2>
+	<table class="table table-bordered table-hover">
+		<thead class="table-light">
+		<tr>
+			<th>Start Time (UTC)</th>
+			<th>Contest Name</th>
+			<th>Duration</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr class="table-success">
+			<td>2025-04-06 11:00</td>
+			<td><a href="/contest/abc350">AtCoder Beginner Contest 350</a></td>
+			<td>100 min</td>
+		</tr>
+		</tbody>
+	</table>
+	
+	<h2 class="mt-5">Past Contests</h2>
+	<table class="table table-bordered table-hover">
+		<thead class="table-light">
+		<tr>
+			<th>Start Time (UTC)</th>
+			<th>Contest Name</th>
+			<th>Duration</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>2025-03-30 11:00</td>
+			<td><a href="/contest/abc349">AtCoder Beginner Contest 349</a></td>
+			<td>100 min</td>
+		</tr>
+		<tr>
+			<td>2025-03-23 11:00</td>
+			<td><a href="/contest/arc160">AtCoder Regular Contest 160</a></td>
+			<td>120 min</td>
+		</tr>
+		<tr>
+			<td colspan="3" class="text-end">
+			<a href="/contests/archive">→ Past Contests</a>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	</div>
+{% endblock %}

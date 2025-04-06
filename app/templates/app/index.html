@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container mt-4">
+		<div class="row">
+			<!-- 左側：最近のコンテスト -->
+			<div class="col-md-8">
+				<h2>Recent Contests</h2>
+				<div class="list-group">
+					<a href="/contest/abc350" class="list-group-item list-group-item-action">
+						ABC350 - April 5, 2025
+					</a>
+					<a href="/contest/abc349" class="list-group-item list-group-item-action">
+						ABC349 - March 29, 2025
+					</a>
+					<a href="/contest/arc160" class="list-group-item list-group-item-action">
+						ARC160 - March 22, 2025
+					</a>
+				</div>
+			</div>
+	
+			<!-- 右側：お知らせ -->
+			<div class="col-md-4">
+				<h2>News</h2>
+				<ul class="list-group">
+					<li class="list-group-item">新しいランキングシステムを導入しました。</li>
+					<li class="list-group-item">ABC350の解説を公開しました。</li>
+					<li class="list-group-item">サーバーメンテナンス：4月10日予定</li>
+				</ul>
+			</div>
+		</div>
+	
+		<!-- ランキング -->
+		<div class="row mt-5">
+			<div class="col">
+				<h2>Top Rated Users</h2>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Username</th>
+							<th scope="col">Rating</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>tourist</td>
+							<td>3850</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Benq</td>
+							<td>3750</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>rng_58</td>
+							<td>3650</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}
