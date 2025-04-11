@@ -1,2 +1,5 @@
 .htaccess
 index.cgi
+Pipfile
+.env
+Pipfile.lock

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block title %}ABC400 - Contest Page{% endblock %}
+{% block content %}
+<div class="container mt-4">
+  <h2>AtCoder Beginner Contest 400</h2>
+  <p class="text-muted">Start Time: 2025-05-04 21:00 (JST) / Duration: 100 minutes</p>
+
+  <!-- コンテスト内ナビゲーション -->
+  <ul class="nav nav-tabs mt-4 mb-3">
+    <li class="nav-item">
+      <a class="nav-link active" href="/contest/abc400">Overview</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contest/abc400/tasks">Tasks</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contest/abc400/submit">Submit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contest/abc400/standings">Standings</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contest/abc400/editorial">Editorial</a>
+    </li>
+  </ul>
+
+  <!-- 概要 -->
+  <div class="card">
+    <div class="card-body">
+      <p>
+        Welcome to AtCoder Beginner Contest 400 (ABC400)!<br>
+        This contest consists of 4 problems and lasts for 100 minutes.
+      </p>
+      <p>
+        <strong>Rules:</strong>
+        <ul>
+          <li>Rated for participants with rating below 1200</li>
+          <li>Programming languages allowed: C++, Python, Java, etc.</li>
+          <li>Each problem has partial scoring</li>
+        </ul>
+      </p>
+      <p>
+        <strong>Scoring:</strong> The score distribution is typically 100-200-300-400 for problems A-D.
+      </p>
+      <p>
+        Good luck and have fun!
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
