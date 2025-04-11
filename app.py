@@ -5,6 +5,7 @@ abc = [os.path.basename(x) for x in glob.glob("./templates/app/contests/abc/*")]
 
 app = Flask(__name__)
 #app.config.from_object("app.config")
+print(os.getenv("FLASK_DEBUG"))
 
 @app.route("/")
 def home():
