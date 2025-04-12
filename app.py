@@ -1,5 +1,5 @@
-from flask import Flask, render_template, redirect, url_for
-import glob, os
+from flask import Flask, render_template, redirect, url_for, jsonify
+import glob, os, requests
 
 abc = [os.path.basename(x) for x in glob.glob("./templates/app/contests/abc/*")]
 
@@ -10,6 +10,13 @@ debug = "/kyopro/" if os.getenv("FLASK_DEBUG") else "/"
 @app.route(f"{debug}")
 def home():
 	return render_template("app/index.html")
+
+@app.route(f"{debug}atcoder_rating")
+def graph():
+    data = requests.get("https://atcoder.jp/users/yamato0915/history/json")
+    data = data.json()
+    data = [x for x in data if x["IsRated"]]
+    return jsonify(data)
 
 @app.route(f"{debug}contests")
 def contests():
