@@ -5,7 +5,7 @@ abc = [os.path.basename(x) for x in glob.glob("./templates/app/contests/abc/*")]
 
 app = Flask(__name__)
 #app.config.from_object("app.config")
-debug = "/kyopro/" if os.getenv("FLASK_DEBUG") else "/"
+debug = "/kyopro" if os.getenv("FLASK_DEBUG") else ""
 if os.getenv("FLASK_DEBUG"):
 	@app.route("/")
 	def debugger():
@@ -15,11 +15,11 @@ if os.getenv("FLASK_DEBUG"):
 def home():
 	return render_template("app/index.html")
 
-@app.route(f"{debug}contests")
+@app.route(f"{debug}/contests")
 def contests():
 	return render_template("app/contests/index.html")
 
-@app.route(f"{debug}contests/<name>")
+@app.route(f"{debug}/contests/<name>")
 def contest(name):
 	print(abc)
 	if name in abc:
