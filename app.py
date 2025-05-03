@@ -11,7 +11,7 @@ if os.getenv("FLASK_DEBUG"):
 	def debugger():
 		return redirect(url_for("home"))
 
-@app.route(f"{debug}")
+@app.route(f"{debug}/")
 def home():
 	return render_template("app/index.html")
 
